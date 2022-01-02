@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throws</title>
+</head>
+
+<style>
+
+    .vertical {
+        border-left: 6px solid green;
+        height: 248%;
+        position: absolute;
+        left: 82%;
+        margin-left: -7px;
+        top: 0;
+    }
+
+    .button {
+        position:relative;
+        right:0px;
+        width: 80%;
+        border: 3px solid #73aaca;
+        background-color: rgba(161, 161, 115, 0.335);
+        color: rgba(57, 131, 125, 0.637);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 16px;
+    }
+
+    .button:hover {
+        background-color: #7d77ace0;
+    }
+
+    .right{
+        float: right;
+        width: 180px;
+        border: 3px solid #73AD21;
+        padding: 10px;
+    }
+
+    .codebackground{
+       width:82%;
+    background-color: rgb(147, 236, 236);
+   }
+
+   .coding {
+        font-size: 100%;
+        background-color: rgb(109, 126, 228);
+        color: rgb(101, 84, 177);
+    }
+
+   .try_yourself_right{
+        float: right;
+        width: 180px;
+        border: 3px solid #f1f5eb;
+        padding: 10px;
+    }
+
+    .b {
+        position: absolute;
+        right: 0;
+    } 
+
+    .note {
+        color: rgb(248, 103, 103);
+    }
+
+   .output{
+       color:aliceblue;
+       margin-right:18%;
+    background-color: rgba(7, 15, 17, 0.767);
+   }
+    body
+    {
+        margin-right: 19%;
+        background-color: rgb(215, 236, 241);
+    }
+</style>
+
+<body>
+    <div class="vertical"> </div>
+
+    <h1  style="color: rgb(83, 82, 76);"><u> The Throws keyword</u></h1>
+
+    <p style="font-size: 19px;">
+        The <b>throws keyword </b> is used to declare an exception. 
+        It gives an information to the programmer that there may occur an exception so it is better for the programmer to provide the exception handling code so that normal flow can be maintained.
+    </p>
+
+    <div class="b"style="margin-top: 40px;">
+        <div class="button">
+            <button class="right"><a href="try-catch.html"> <i>Try catch block</i> </a> </button>
+        </div>
+    </div>
+
+  <p style="font-size: 25px; color: rgb(158, 147, 211);" >
+    Advantage of throws keyword
+  </p>
+
+  <p>
+    It provides information to the caller of the method about the exception.
+  </p>
+
+   
+
+    <div class="b" style="margin-top: 120px;">
+        <div class="button">
+            <button class="right"><a href="Finally.html"> <i>Finally</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 200px;">
+        <div class="button">
+            <button class="right"><a href="Nested-try.html"> <i>Nested-try</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 280px;">
+        <div class="button">
+            <button class="right"><a href="throw.html"> <i>Throw</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 360px;">
+        <div class="button">
+            <button class="right"><a href="user defined exception.html"> <i>User defined exception</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 40px;">
+        <div class="button">
+            <button class="right"><a href="Multiple-catch block.html"> <i>Multiple catch block</i> </a> </button>
+        </div>
+    </div>
+
+    
+
+    
+   
+    <div class="coding">
+
+        <h1 style="background-color: whitesmoke;">Syntax</h1>
+
+    <div style="background-color: rgba(166, 198, 224, 0.74);">
+
+    <pre class="codebackground">
+        <code style="color: rgba(73, 97, 207, 0.87); font-size: 15px;" >
+    return_type method_name() throws exception_class_name{  
+        //method code  
+        } 
+        </code>
+    </pre>
+    <div >
+        <p style="color: rgb(248, 46, 248); background-color: rgb(156, 231, 156);" >
+            In the statement, the data-type refers to the primitive data types, method-name is the name of the method
+            and throws is the keyword.
+            The exception-list is the list of exception that the method might throw, separated by comma.
+        </p>
+    </div>
+    </div>
+    </div>
+
+
+    <div style="background-color:  rgb(138, 247, 180);">
+        <h3>Example </h3>
+    <pre style="color: rgba(73, 97, 207, 0.87); font-size: 17px;" class=" codebackground" >
+        public class Main
+        {
+            static void checkAge(int age) throws ArithmeticException 
+            {
+              if (age < 18) 
+              {
+                throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+              }
+              else 
+              {
+                System.out.println("Access granted - You are old enough!");
+              }
+            }
+          
+            public static void main(String[] args) 
+            {
+              checkAge(15); // Set age to 15 (which is below 18...)
+            }
+        }
+    </pre>
+
+    <div class="b" class="try_yourself_right" ><br>
+        <div class="button" >
+            <button class="right"><a target="_blank" href="https://www.w3schools.com/java/tryjava.asp?filename=demo_throws">Try it Yourself &raquo;</a></button>
+        </div>
+    </div>
+
+    <p style="font-size: 20px;"><strong>Output:</strong></p>
+    <div style="font-size: 14px;" class="output"><pre>
+Exception in thread "main" java.lang.ArithmeticException: Access denied - You must be at least 18 years old.
+    at MyClass.checkAge(MyClass.java:4)
+    at MyClass.main(MyClass.java:12)
+</pre></div>
+
+    </div>
+
+    <p style="font-size: 25px; color: burlywood;">
+        <u>Difference between Throw and throws. </u>
+    </p>
+
+    <table>
+        <tr>
+            <td>Throw</td>
+            <td>Throws</td>
+        </tr>
+        <tr>
+            <td>Throw is followed by instance.</td>
+            <td>Throws is followed by class. </td>
+        </tr> 
+        <tr>
+            <td>
+                Throw is used within the method.
+            </td>
+            <td>
+                Throws is used with the method signature.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Cannot throw multiple exception.
+            </td>
+            <td>
+                Can declare multiple exception 
+                eg. public void method()throws IOException,SQLException.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                throw keyword is used to explicitly throw an exception.
+            </td>
+            <td>
+                throws keyword is used to declare an exception.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Checked exception cannot be propagated using throw only.
+            </td>
+            <td>
+                Checked exception can be propagated with throws.
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+    <div class="button" style="font-size: 20px;"> 
+        <a href="../index.html"> Back to home </a>
+    </div>
+
+    <div class="b" class="try_yourself_right" >
+        <div class="button" >
+            <button class="right"><a href="user defined exception.html">Next &raquo;</a></button>
+        </div>
+    </div>
+
+</body>
+</html>

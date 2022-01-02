@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>try</title>
+
+    <style>
+
+        .vi {
+            border-left: 6px solid green;
+            height: 444%;
+            position: absolute;
+            left: 82%;
+            margin-left: -7px;
+            top: 0;
+        }
+
+        .right{
+            float: right;
+            width: 180px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+
+        .try_yourself_right{
+            float: right;
+            width: 180px;
+            border: 3px solid #f1f5eb;
+            padding: 10px;
+        }
+        
+        .button {
+            position:relative;
+            right:0px;
+            width: 80%;
+            border: 3px solid #73aaca;
+            background-color: rgba(161, 161, 115, 0.335);
+            color: rgba(57, 131, 125, 0.637);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .button:hover {
+            background-color: #7d77ace0;
+        }
+
+        .callfinally {
+            position: absolute;
+            right: 0;
+        } 
+
+        .b {
+            position: absolute;
+            right: 0;
+        } 
+
+        .note {
+          font-size: 150%;
+          color: red;
+        }
+
+        .note1 {
+          color: rgb(221, 163, 163);
+        }
+
+        .coding {
+          font-size: 100%;
+          background-color: rgb(43, 70, 223);
+          color: rgb(101, 84, 177);
+        }
+
+       .codebackground{
+           width:82%;
+        background-color: rgb(199, 230, 227);
+       }
+
+       .ex{
+        background-color: rgba(190, 170, 184, 0.651);
+       }
+
+       .output{
+           color:aliceblue;
+           margin-right:18%;
+        background-color: rgba(7, 15, 17, 0.767);
+       }
+        body
+        {
+            margin-right: 19%;
+            background-color: rgb(215, 236, 241);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="vi"> </div>
+    <section>
+        <h2 style="color: rgb(83, 82, 76);"> <u>Try-Catch block</u> </h2>
+
+        <div class="callfinally"><br><br><br><br><br><br><br><br>
+            <div class="button">
+                <button class="right"><a href="Multiple-catch block.html"><i>Multiple-catch block</i> </a></button>
+            </div>
+        </div>
+
+         <p>The <span class="note">  <i> try </i> </span> statement allows you to define a block of code to be tested for errors while it is being executed.</p>
+         If an exception occurs at the particular statement of try block, the rest of the block code will not execute. 
+            <br>
+            So, it is recommended not to keeping the code in try block that will not throw an exception.</p>
+        
+        <p>
+            The code in the try block may be capable of throwing more than one type of exception.
+        </p>
+        <p>Java try block must be followed by either catch or finally block.</p>
+
+       
+    </section>
+
+    <div class="coding">
+
+        <h1 class="note1">Syntax</h1>
+
+            <div class="callfinally"><br><br><br><br><br><br><br>
+            <div class="button">
+                <button class="right"><a href="throw.html"><i>Throw</i> </a></button>
+            </div>
+            </div>
+        
+
+        <div class="codebackground">
+        
+            <div class="b"><br><br>
+                <div class="button">
+                    <button class="right"><a href="Nested-try.html"><i>Nested-try</i> </a></button>
+                </div>
+            </div>
+            
+            <pre><code> 
+                try 
+                {
+                    // <em>Block of code to try</em>  
+                }
+                catch(Exception <em>e</em>)
+                {
+                    //<em>Block of code to handle errors</em> 
+                }
+                </code></pre>
+               
+        </div>
+
+    </div>
+    
+    </div>
+    
+    
+    <div class="b"><br><br><br>
+        <div class="button">
+            <button class="right"><a href="throws.html"><i>Throws</i> </a></button>
+        </div>
+    </div>
+        <h2 style="color: rgb(83, 82, 76);">Catch block</h2>
+        
+        <p>Java catch block is used to handle the Exception by declaring the type of exception within the parameter. 
+            The declared exception must be the parent class exception ( i.e., Exception) or the generated exception type. 
+            However, the good approach is to declare the generated type of exception.</p>
+
+            <div class="b"><br><br><br><br><br><br><br>
+                <div class="button">
+                    <button class="right"><a href="user defined exception.html"><i>User defined exception</i> </a></button>
+                </div>
+            </div>
+        
+            <div class="b"><br><br>
+                <div class="button">
+                    <button class="right"><a href="Finally.html"> <i>Finally</i> </a> </button>
+                </div>
+            </div> 
+
+            <img src="exceptionobject.jpg" alt="exception diagram">
+            
+   <!-- <div class="ex">--> <div style="background-color: rgba(72, 247, 247, 0.938);">
+
+        
+        <p>Consider the following Example :</p>
+        <p>This will generate an error, because <strong>myNumbers[10]</strong> does not exist.</p>
+        
+    <pre class="codebackground">
+        <code style="color: rgba(73, 97, 207, 0.87); font-size: 17px;" >
+        public class Main {
+        &nbsp; public static void main(String[ ] args) {
+        &nbsp;&nbsp;&nbsp; int[] myNumbers = {1, 2, 3};
+        &nbsp;&nbsp;&nbsp; System.out.println(myNumbers[10]); <em>//error!</em>
+        &nbsp; }
+        }
+        </code>
+    </pre>
+        
+        <p>The output will be something like this:</p>
+        
+            <div class="b" class="try_yourself_right" >
+                <div class="button" >
+                    <button class="right"><a target="_blank" href="https://www.w3schools.com/java/tryjava.asp?filename=demo_try_error">Try it Yourself &raquo;</a></button>
+                </div>
+            </div>
+
+            <div class="output" >
+                <code>
+                Exception in thread &quot;main&quot; java.lang.ArrayIndexOutOfBoundsException: 10<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                at Main.main(Main.java:4)
+                </code>
+            </div>
+
+            <p>If an error occurs, we can use <i class="note">try...catch </i>to catch the error and execute some code to handle it:</p>
+           
+    <div >
+                <h3>Example</h3>
+                <pre class=" codebackground" >
+<code  style="color: rgba(73, 97, 207, 0.87); font-size: 17px;">
+    &nbsp;public class Main {
+    &nbsp;&nbsp;&nbsp;public static void main(String[ ] args) {
+    &nbsp;&nbsp;&nbsp;try {
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int[] myNumbers = {1, 2, 3};
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(myNumbers[10]);
+    &nbsp;&nbsp;&nbsp;} catch (Exception e) {
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(&quot;Something went wrong.  Exception caught &quot;);
+    &nbsp;&nbsp;&nbsp;}
+    &nbsp;}
+    }
+</code>
+                </pre>
+
+                <div class="b" class="try_yourself_right" >
+                    <div class="button" >
+                        <button class="right"><a target="_blank" href="https://www.w3schools.com/java/tryjava.asp?filename=demo_try_catch">Try it Yourself &raquo;</a></button>
+                    </div>
+                </div>
+                <p style="font-size: 19px;">The output will be:</p>
+                
+                
+
+                <div class="output"  style="font-size: 20px;">
+                Something went wrong. Exception caught.
+                </div>
+    </div>
+            
+    </div>
+
+    
+    <div style="background-color: cyan;">
+        <h3>Example -2</h3>
+    <pre style="color: rgba(73, 97, 207, 0.87); font-size: 17px;" class=" codebackground" >
+        public class TryCatchExample2 {
+            public static void main(String[] args) {
+                try
+                {
+                int data=50/0; //may throw exception 
+                }
+                    //handling the exception
+                catch(ArithmeticException e)
+                {
+                    System.out.println(e);
+                }
+                System.out.println("rest of the code");
+            }
+            
+        }
+    </pre>
+
+    <div class="b" class="try_yourself_right" >
+        <div class="button" >
+            <button class="right"><a target="_blank" href="https://compiler.javatpoint.com/opr/test.jsp?filename=TryCatchExample2">Try it Yourself &raquo;</a></button>
+        </div>
+    </div>
+
+    <p><strong>Output:</strong></p>
+    <div style="font-size: 17px;" class="output"><pre>
+    java.lang.ArithmeticException: / by zero
+    rest of the code
+</pre></div>
+
+    </div>
+
+    <div class="button">
+        <a href="../index.html"> Back to home </a>
+    </div>
+
+    <div class="b" class="try_yourself_right" >
+        <div class="button" >
+            <button class="right"><a href="Multiple-catch block.html">Next &raquo;</a></button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple-Catch</title>
+    <style>
+
+        .vertical {
+            border-left: 6px solid green;
+            height: 445%;
+            position: absolute;
+            left: 82%;
+            margin-left: -7px;
+            top: 0;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(160, 226, 177);
+            border-radius: 30%;
+            display: inline-block;
+        }
+
+        .button {
+            position:relative;
+            right:0px;
+            width: 80%;
+            border: 3px solid #73aaca;
+            background-color: rgba(161, 161, 115, 0.335);
+            color: rgba(57, 131, 125, 0.637);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .button:hover {
+            background-color: #7d77ace0;
+        }
+
+        .right{
+            float: right;
+            width: 180px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+
+        .codebackground{
+           width:82%;
+        background-color: rgb(199, 230, 227);
+       }
+
+       .try_yourself_right{
+            float: right;
+            width: 180px;
+            border: 3px solid #f1f5eb;
+            padding: 10px;
+        }
+
+        .b {
+            position: absolute;
+            right: 0;
+        } 
+
+       .output{
+           color:aliceblue;
+           margin-right:18%;
+        background-color: rgba(7, 15, 17, 0.767);
+       }
+        body
+        {
+            margin-right: 19%;
+            background-color: rgb(215, 236, 241);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vertical"> </div>
+    <h1  style="color: rgb(83, 82, 76);"><u>Multi-Catch block </u></h1>
+
+    <p>A try block can be followed by one or more catch blocks. Each catch block must contain a different exception handler. 
+        So, if you have to perform different tasks at the occurrence of different exceptions, use java <span style="color: red;" >multi-catch</span> block.</p>
+
+    <p> When an exception is thrown, each statement is inspected in order and the first one 
+        whose type matches that of the exception is executed.
+    </p>
+
+    <p>
+        After one catch statement executes,
+        the other are bypassed and the execution continues after the try/catch block.
+    </p>
+    <div class="b" style="margin-top: 515px;">
+        <div class="button">
+            <button class="right"><a href="user defined exception.html"> <i>User defined exception</i> </a> </button>
+        </div>
+    </div> 
+
+    <p style="font-size: 25px;  color: rgb(252, 145, 51);" >
+        Points to remember
+    </p>
+
+    <div class="b" ><br>
+        <div class="button">
+            <button class="right"><a href="try-catch.html"> <i>Try-Catch block</i> </a> </button>
+        </div>
+    </div> 
+    
+    <p >
+       <span class="dot"></span> At a time only one exception occurs and at a time only one catch block is executed.
+    </p>
+    
+    <p>
+        
+        <span class="dot"></span> 
+        All catch blocks must be ordered from most specific to most general, 
+        i.e. catch for ArithmeticException must come before catch for Exception.
+
+       
+
+        <div class="b"><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="button">
+                <button class="right"><a href="throw.html"> <i>Throw</i> </a> </button>
+            </div>
+        </div>
+
+    </p>
+
+    <div style="background-color: rgb(138, 247, 180);">
+        <h3>Example -1</h3>
+
+        <div>
+
+            <div class="b"><br><br><br><br><br>
+                <div class="button">
+                    <button class="right"><a href="Finally.html"> <i>Finally block</i> </a> </button>
+                </div>
+            </div>
+            <div class="b">
+                <div class="button">
+                    <button class="right"><a href="Nested-try.html"> <i>Nested try</i> </a> </button>
+                </div>
+            </div>
+    <pre style="color: rgba(73, 97, 207, 0.87); font-size: 17px;" class=" codebackground" >
+        public class MultipleCatchBlock1 {  
+  
+            public static void main(String[] args) {  
+                  
+                   try {    
+                        int a[]=new int[5];    
+                        a[5]=30/0;    
+                       }    
+                       catch(ArithmeticException e)  
+                          {  
+                           System.out.println("Arithmetic Exception occurs");  
+                          }    
+                       catch(ArrayIndexOutOfBoundsException e)  
+                          {  
+                           System.out.println("ArrayIndexOutOfBounds Exception occurs");  
+                          }    
+                       catch(Exception e)  
+                          {  
+                           System.out.println("Parent Exception occurs");  
+                          }             
+                       System.out.println("rest of the code");    
+            }  
+        }  
+    </pre>
+
+    <div class="b" style="top: 630px;">
+        <div class="button">
+            <button class="right"><a href="throws.html"><i>Throws</i> </a></button>
+        </div>
+    </div>
+        </div>
+    
+
+    <div class="b" class="try_yourself_right" ><br>
+        <div class="button" >
+            <button class="right"><a target="_blank" href="https://compiler.javatpoint.com/opr/test.jsp?filename=MultipleCatchBlock1">Try it Yourself &raquo;</a></button>
+        </div>
+    </div>
+
+    <p style="font-size: 20px;"><strong>Output:</strong></p>
+    <div style="font-size: 17px;" class="output"><pre>
+Arithmetic Exception occurs
+rest of the code
+</pre></div>
+
+    </div>
+
+    <div style="background-color:  rgb(138, 247, 180);">
+        <h3>Example -2</h3>
+
+        <p style="font-size: 20px;">
+            In this example, try block contains two exceptions. 
+            But at a time only one exception occurs and its corresponding catch block is invoked. 
+        </p>
+    <pre style="color: rgba(73, 97, 207, 0.87); font-size: 17px;" class=" codebackground" >
+        public class MultipleCatchBlock3 {  
+  
+            public static void main(String[] args) {  
+                  
+                   try{    
+                        int a[]=new int[5];    
+                        a[5]=30/0;    
+                        System.out.println(a[10]);  
+                       }    
+                       catch(ArithmeticException e)  
+                          {  
+                           System.out.println("Arithmetic Exception occurs");  
+                          }    
+                       catch(ArrayIndexOutOfBoundsException e)  
+                          {  
+                           System.out.println("ArrayIndexOutOfBounds Exception occurs");  
+                          }    
+                       catch(Exception e)  
+                          {  
+                           System.out.println("Parent Exception occurs");  
+                          }             
+                       System.out.println("rest of the code");    
+            }  
+        }  
+    </pre>
+
+    <div class="b" class="try_yourself_right" ><br>
+        <div class="button" >
+            <button class="right"><a target="_blank" href="https://compiler.javatpoint.com/opr/test.jsp?filename=MultipleCatchBlock3">Try it Yourself &raquo;</a></button>
+        </div>
+    </div>
+
+    <p style="font-size: 20px;"><strong>Output:</strong></p>
+    <div style="font-size: 17px;" class="output"><pre>
+Arithmetic Exception occurs
+rest of the code
+</pre></div>
+
+    </div>
+
+    <div style="background-color: rgb(138, 247, 180);">
+        <h3>Example -3</h3>
+
+        <p style="font-size: 20px;">
+            In this example, we generate NullPointerException, but didn't provide the corresponding exception type. 
+            In such case, the catch block containing the parent exception class Exception will invoked.
+        </p>
+    <pre style="color: rgba(73, 97, 207, 0.87); font-size: 17px;" class=" codebackground" >
+        public class MultipleCatchBlock4 {  
+  
+            public static void main(String[] args) {  
+                  
+                   try{    
+                        String s=null;  
+                        System.out.println(s.length());  
+                       }    
+                       catch(ArithmeticException e)  
+                          {  
+                           System.out.println("Arithmetic Exception occurs");  
+                          }    
+                       catch(ArrayIndexOutOfBoundsException e)  
+                          {  
+                           System.out.println("ArrayIndexOutOfBounds Exception occurs");  
+                          }    
+                       catch(Exception e)  
+                          {  
+                           System.out.println("Parent Exception occurs");  
+                          }             
+                       System.out.println("rest of the code");    
+            }  
+        }  
+    </pre>
+
+    <div class="b" class="try_yourself_right" ><br>
+        <div class="button" >
+            <button class="right"><a target="_blank" href="https://compiler.javatpoint.com/opr/test.jsp?filename=MultipleCatchBlock4">Try it Yourself &raquo;</a></button>
+        </div>
+    </div>
+
+    <p style="font-size: 20px;"><strong>Output:</strong></p>
+    <div style="font-size: 17px;" class="output"><pre>
+Parent Exception occurs
+rest of the code
+</pre></div>
+
+    </div>
+
+
+    <div class="button" style="font-size: 20px;">
+        <a href="../index.html"> Back to home </a>
+    </div>
+
+    <div class="b" class="try_yourself_right" >
+        <div class="button" >
+            <button class="right"><a href="Nested-try.html">Next &raquo;</a></button>
+        </div>
+    </div>
+
+
+</body>
+</html>

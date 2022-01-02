@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User defined exception</title>
+</head>
+
+<style>
+
+    .vertical {
+        border-left: 6px solid green;
+        height: 340%;
+        position: absolute;
+        left: 82%;
+        margin-left: -7px;
+        top: 0;
+    }
+
+    .button {
+        position:relative;
+        right:0px;
+        width: 80%;
+        border: 3px solid #73aaca;
+        background-color: rgba(161, 161, 115, 0.335);
+        color: rgba(57, 131, 125, 0.637);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 16px;
+    }
+
+    .button:hover {
+        background-color: #7d77ace0;
+    }
+
+    .right{
+        float: right;
+        width: 180px;
+        border: 3px solid #73AD21;
+        padding: 10px;
+    }
+
+    .codebackground{
+       width:82%;
+    background-color: rgb(147, 236, 236);
+   }
+
+   .coding {
+        font-size: 100%;
+        background-color: rgb(109, 126, 228);
+        color: rgb(101, 84, 177);
+    }
+
+   .try_yourself_right{
+        float: right;
+        width: 180px;
+        border: 3px solid #f1f5eb;
+        padding: 10px;
+    }
+
+    .b {
+        position: absolute;
+        right: 0;
+    } 
+
+    .note {
+        color: rgb(248, 103, 103);
+    }
+
+   .output{
+       color:aliceblue;
+       margin-right:18%;
+    background-color: rgba(7, 15, 17, 0.767);
+   }
+    body
+    {
+        margin-right: 19%;
+        background-color: rgb(215, 236, 241);
+    }
+</style>
+
+<body>
+    <div class="vertical"> </div>
+
+    <h1  style="color: rgb(83, 82, 76);"><u> User-defined exception</u></h1>
+
+    <p style="font-size: 19px;">
+        In java we have already defined, exception classes such as ArithmeticException, NullPointerException etc.
+        <br>These exceptions are already set to trigger on pre-defined conditions such as when you divide a number by zero it triggers ArithmeticException, 
+        Already we learnt how to throw these exceptions explicitly based on our conditions using throw keyword. 
+    </p>
+
+    <div class="b"style="margin-top: 25px;">
+        <div class="button">
+            <button class="right"><a href="try-catch.html"> <i>Try catch block</i> </a> </button>
+        </div>
+    </div>
+
+  <p style="font-size: 20px; color: rgb(62, 29, 226);" >
+    In java we can create our own exception class which are basically derived classes of Exception and throw that exception using throw keyword. 
+    These exceptions are known as user-defined or custom exceptions. 
+  </p>
+
+   
+
+    <div class="b" style="margin-top: 120px;">
+        <div class="button">
+            <button class="right"><a href="Finally.html"> <i>Finally</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 200px;">
+        <div class="button">
+            <button class="right"><a href="Nested-try.html"> <i>Nested-try</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 280px;">
+        <div class="button">
+            <button class="right"><a href="throw.html"> <i>Throw</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 360px;">
+        <div class="button">
+            <button class="right"><a href="throws.html"> <i>Throws</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 40px;">
+        <div class="button">
+            <button class="right"><a href="Multiple-catch block.html"> <i>Multiple catch block</i> </a> </button>
+        </div>
+    </div>
+
+    <div style="background-color:  rgb(138, 247, 180);">
+        <h3>Example </h3>
+    <pre style="color: rgba(73, 97, 207, 0.87); font-size: 17px;" class=" codebackground" >
+class InvalidAgeException extends Exception
+{  
+    InvalidAgeException(String s)
+    {  
+        super(s);  
+    }  
+}  
+    </pre>
+
+    <pre style="color: rgba(73, 97, 207, 0.87); font-size: 17px;" class=" codebackground" >
+class TestCustomException1
+{  
+    static void validate(int age)throws InvalidAgeException
+    {  
+        if(age<18)  
+        throw new InvalidAgeException(&quot;not valid&quot;);  
+        else  
+        System.out.println(&quot;welcome to vote&quot;);  
+    }  
+        
+    public static void main(String args[])
+    {  
+        try
+        {  
+        validate(13);  
+        }
+        catch(Exception m)
+        {
+            System.out.println(&quot;Exception occured: &quot;+m);
+        }  
+        System.out.println(&quot;rest of the code...&quot;);  
+    }  
+}      
+    </pre>
+
+    <div class="b" class="try_yourself_right" ><br>
+        <div class="button" >
+            <button class="right"><a target="_blank" href="https://compiler.javatpoint.com/opr/test.jsp?filename=TestCustomException1">Try it Yourself &raquo;</a></button>
+        </div>
+    </div>
+
+    <p style="font-size: 20px;"><strong>Output:</strong></p>
+    <div style="font-size: 17px;" class="output"><pre>
+    Exception occured: InvalidAgeException:not valid
+    rest of the code...
+</pre></div>
+
+    </div>
+
+
+    <div  style="background-color:  rgb(138, 247, 180);" >
+        <h3>Example </h3>
+    <pre  style="color: rgba(73, 97, 207, 0.87); font-size: 17px;" class= "codebackground">
+class InvalidProductException extends Exception
+{
+    public InvalidProductException(String s)
+    {
+        // Call constructor of parent Exception
+        super(s);
+    }
+}
+    
+public class Main
+{
+    void productCheck(int weight) throws InvalidProductException
+    {
+        if(weight<100)
+        {
+            throw new InvalidProductException(&quot;Product Invalid&quot;);
+        }
+    }
+    
+    public static void main(String args[])
+    {
+        Main obj = new Main();
+        try
+        {
+            obj.productCheck(60);
+        }
+        catch (InvalidProductException ex)
+        {
+            System.out.println( &quot;Caught the exception&quot;);
+            System.out.println(ex.getMessage());
+        }
+    }
+}
+   </pre>
+
+    <div class="b" class="try_yourself_right" ><br>
+        <div class="button" >
+            <button class="right"><a target="_blank" href="https://www.onlinegdb.com/online_java_compiler">Try it Yourself &raquo;</a></button>
+        </div>
+    </div>
+
+
+    <p style="font-size: 20px;"><strong>Output:</strong></p>
+    <div style="font-size: 17px;" class="output"><pre>
+Caught the exception
+Product Invalid
+</pre></div>
+
+    </div>
+
+    <div class="button" style="font-size: 20px;"> 
+        <a href="../index.html"> Back to home </a>
+    </div>
+
+</body>
+</html>
