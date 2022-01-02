@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finally</title>
+</head>
+
+<style>
+
+    .vertical {
+        border-left: 6px solid green;
+        height: 487%;
+        position: absolute;
+        left: 82%;
+        margin-left: -7px;
+        top: 0;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        background-color: rgb(248, 125, 24);
+        border-radius: 30%;
+        display: inline-block;
+    }
+
+    .button {
+        position:relative;
+        right:0px;
+        width: 80%;
+        border: 3px solid #73aaca;
+        background-color: rgba(161, 161, 115, 0.335);
+        color: rgba(57, 131, 125, 0.637);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 16px;
+    }
+
+    .button:hover {
+        background-color: #7d77ace0;
+    }
+
+    .right{
+        float: right;
+        width: 180px;
+        border: 3px solid #73AD21;
+        padding: 10px;
+    }
+
+    .codebackground{
+       width:82%;
+    background-color: rgb(199, 230, 227);
+   }
+
+   .try_yourself_right{
+        float: right;
+        width: 180px;
+        border: 3px solid #f1f5eb;
+        padding: 10px;
+    }
+
+    .b {
+        position: absolute;
+        right: 0;
+    } 
+
+   .output{
+       color:aliceblue;
+       margin-right:18%;
+    background-color: rgba(7, 15, 17, 0.767);
+   }
+    body
+    {
+        margin-right: 19%;
+        background-color: rgb(215, 236, 241);
+    }
+</style>
+
+<body>
+    <div class="vertical"> </div>
+
+    <h1  style="color: rgb(83, 82, 76);"><u> Finally block</u></h1>
+
+    <p style="font-size: 19px;">
+        The finally statement lets you execute code, after try...catch.<br>
+        <b>Java finally block</b> is a block that is used to execute important code such as closing connection, stream etc.
+    </p>
+
+    <p style="font-size: 19px;">
+        The code within the finally block is always executed whether exception is thrown or not.
+    </p>
+
+    <p style="font-size: 19px;">
+        The finally clause must appear after all of the catch clauses.
+    </p>
+
+    <p >
+        <span class="dot"></span> &nbsp;If you don't handle exception, before terminating the program, JVM executes finally block(if any).
+    </p>
+
+    <div class="b">
+        <div class="button">
+            <button class="right"><a href="try-catch.html"> <i>Try catch block</i> </a> </button>
+        </div>
+    </div>
+
+    <p>
+        <span class="dot"></span> There is only one finally block per try block.
+    </p>
+
+    <div class="b"><br><br><br><br><br><br><br><br>
+        <div class="button">
+            <button class="right"><a href="Nested-try.html"> <i>Nested-try</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 230px;">
+        <div class="button">
+            <button class="right"><a href="throw.html"> <i>Throw</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 320px;">
+        <div class="button">
+            <button class="right"><a href="throws.html"> <i>Throws</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 410px;">
+        <div class="button">
+            <button class="right"><a href="user defined exception.html"> <i>User defined exception</i> </a> </button>
+        </div>
+    </div>
+
+    <div class="b" style="margin-top: 55px;">
+        <div class="button">
+            <button class="right"><a href="Multiple-catch block.html"> <i>Multiple catch block</i> </a> </button>
+        </div>
+    </div>
+
+    <div style="background-color: rgb(112, 243, 177);">
+        <div class="coding">
+           
+            <h1 style="color: rgb(255, 255, 255);">Syntax</h1>
+
+            <p>
+                The try-catch-finally construct can be created as follows:
+            </p>
+
+            <div class="codebackground">
+                <pre><code>
+    try
+    {
+        ..........
+    }
+    catch(.......)
+    {
+        .........
+    }
+    finally
+    {
+        ...........
+    }
+</code></pre>
+
+        </div>
+        <p style="margin-left: 300px; font-size: 25px;">OR</p>
+
+        <div class="coding">
+
+            <p>
+                The try-finally can be created as follows:
+            </p>
+
+            <div class="codebackground">
+                <pre><code>
+    try
+    {
+        .........
+    }
+    finally
+    {
+        .........
+    }
+</code></pre>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    
+
+    <div style="background-color: rgb(241, 232, 220);">
+        <br>
+        <img src="finally.jpg" alt="Finally .jpg"> 
+        <br><br>
+    </div>
+   
+    <div style="background-color: rgba(72, 247, 247, 0.938);">
+        <p style="font-size: 20px;">
+            <b>Example</b> where exception occurs and handled :-
+        </p> 
+
+        <pre class="codebackground">
+            <code style="color: rgba(73, 97, 207, 0.87); font-size: 15px;" >
+    public class Main 
+    {
+        public static void main(String[] args) 
+        {
+            try 
+            {
+                int[] myNumbers = {1, 2, 3};
+                System.out.println(myNumbers[10]);
+            }
+            catch (Exception e)
+            {
+                System.out.println("Something went wrong.");
+            } 
+            finally 
+            {
+                System.out.println("The 'try catch' is finished."); //finally block is always executed
+            }
+        }
+    }
+            </code>
+        </pre>
+
+        <div class="b" class="try_yourself_right" ><br><br>
+            <div class="button" >
+                <button class="right"><a target="_blank" href="https://www.w3schools.com/java/tryjava.asp?filename=demo_try_catch_finally">Try it Yourself &raquo;</a></button>
+            </div>
+        </div>
+
+        <p style="font-size: 20px;"><strong>Output:</strong></p>
+        <div class="output"  style="font-size: 20px;">
+        Something went wrong. <br>
+        The 'try catch' is finished.
+        </div>
+    </div>
+
+    <div style="background-color: rgba(72, 247, 247, 0.938);">
+        <p style="font-size: 20px;">
+            <b>Example</b> where exception occurs and not handled :- 
+        </p> 
+
+        <pre class="codebackground">
+            <code style="color: rgba(73, 97, 207, 0.87); font-size: 15px;" >
+        class TestFinallyBlock1
+        {  
+            public static void main(String args[])
+            {  
+                try
+                {  
+                    int data=25/0;  
+                    System.out.println(data);  
+                }  
+                catch(NullPointerException e)
+                {
+                    System.out.println(e);
+                }  
+                finally
+                {
+                    System.out.println("finally block is always executed");
+                }  
+                System.out.println("rest of the code...");  
+            }  
+        }  
+            </code>
+        </pre>
+
+        <div class="b" class="try_yourself_right" ><br><br>
+            <div class="button" >
+                <button class="right"><a target="_blank" href="https://compiler.javatpoint.com/opr/test.jsp?filename=TestFinallyBlock1">Try it Yourself &raquo;</a></button>
+            </div>
+        </div>
+
+        <p style="font-size: 20px;"><strong>Output:</strong></p>
+        <div class="output"  style="font-size: 20px;">
+        finally block is always executed <br>
+        Exception in thread main java.lang.ArithmeticException: / by zero
+        </div>
+    </div>
+
+    <div class="button" style="font-size: 20px;"> 
+        <a href="../index.html"> Back to home </a>
+    </div>
+
+    <div class="b" class="try_yourself_right" >
+        <div class="button" >
+            <button class="right"><a href="throw.html">Next &raquo;</a></button>
+        </div>
+    </div>
+
+</body>
+</html>
